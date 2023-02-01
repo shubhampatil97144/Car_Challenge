@@ -21,7 +21,6 @@ const ModelCar : React.FC<ModelCar> = ({ carData }) => {
 
   useEffect(() => {
     // Arrange the data when the value in dependies changed
-
     // Vehicle Model List
     if(carData){
       const missingData : useStateData[] = [];
@@ -59,11 +58,9 @@ const ModelCar : React.FC<ModelCar> = ({ carData }) => {
           .sort(({ 1: a }, { 1: b }) => Number(b) - Number(a))
           .slice(0, 1)
           .map(([label, value]) => ({ label, value }));
-  
         setDefaultCarData(top2);
       }      
     }
-
   }, [carData]);
 
   return (
