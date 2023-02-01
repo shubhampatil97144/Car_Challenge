@@ -48,8 +48,8 @@ const ProgressData: React.FC<ProgressData> = ({
 
       <div className="d-flex flex-column mt-2 w-full">
         <Typography title={"Valid"} length={valid.length} percentage={validDataPercentage} type={"success"} />
-        <Typography title={"Mismatched"} length={mismatched.length} percentage={mismatchedDataPercentage} type={"warning"} />
-        <Typography title={"Missing"} length={missing.length} percentage={missingDataPercentage} type={"danger"} />
+        <Typography title={"Mismatched"} length={mismatched.length} percentage={(mismatchedDataPercentage).toFixed(1)} type={"warning"} />
+        <Typography title={"Missing"} length={missing.length} percentage={(missingDataPercentage).toFixed(1)} type={"danger"} />
       </div>
 
       <div className="d-flex flex-column mt-5">
